@@ -17,7 +17,7 @@
     <link href="{{asset('static/src/plugins/src/apex/apexcharts.css') }}" rel="stylesheet" type="text/css">
     <link href="{{asset('static/src/assets/css/light/dashboard/dash_1.css') }}" rel="stylesheet" type="text/css" />
     <!-- <link href="{{asset('static/src/assets/css/dark/dashboard/dash_1.css') }}" rel="stylesheet" type="text/css" /> -->
-    
+    <link rel="shortcut icon" href="{{asset('static/frontend/assets/img/fivicon.png') }}"><!-- Google Fonts -->
     <link href="{{asset('static/src/assets/css/light/apps/contacts.css') }}" rel="stylesheet" type="text/css" />
     <link href="{{asset('static/src/assets/css/dark/apps/contacts.css') }}" rel="stylesheet" type="text/css" />
     <link href="{{asset('static/src/assets/css/light/users/account-setting.css') }}" rel="stylesheet" type="text/css" />

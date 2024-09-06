@@ -4,9 +4,9 @@
   <section class="bg-center bg-cover bg-no-repeat position-relative section" style="background-image: url({{asset('static/frontend/assets/img/home-banner-2.jpg') }})">
     <div class="position-absolute top-0 start-0 end-0 bottom-0 bg-black bg-opacity-80"></div>
     <div class="container position-relative">
-      <h2 class="display-3 fw-700 text-white lh-1 mb-4">Our Partners</h2>
+      <h2 class="display-3 fw-700 text-white lh-1 mb-4">Universities we serve</h2>
       <p class="text-white">
-        Let's be part of our partners and benefits the most attractive things for your company.
+        Let's be part of our serves Universities and benefits the most attractive things for your company.
       </p>
     </div>
   </section><!-- End Section --><!-- section -->

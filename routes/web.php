@@ -18,10 +18,12 @@ use App\Http\Controllers\TypePaymentController;
 use App\Http\Controllers\TypeRoomController;
 use App\Http\Controllers\UniversityController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\VcallController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('', [FrontendController::class, 'index'])->name('frontend.index');
 // frontend controller
+Route::post('/save-user-call', [FrontendController::class, 'saveUserVideoCall'])->name('saveUserVideoCall');
 Route::get('/rom-detail/{id}', [FrontendController::class, 'roomDetail'])->name('frontend.room_detail');
 Route::get('about-us/', [FrontendController::class, 'about'])->name('frontend.about');
 Route::get('contact-us/', [FrontendController::class, 'contact'])->name('frontend.contact');
@@ -39,6 +41,7 @@ Route::middleware(['auth', 'CheckStatus'])->group(function (){
     Route::get('list-students', [SaveStudentController::class, 'list_students'])->name('list_students');
     Route::get('detail-of-my-room/{id}', [SaveStudentController::class, 'detail_myRoom'])->name('detail_myRoom');
 
+    Route::post('confirm-schedule/{id}', [VcallController::class, 'confirm_scheduleVcall'])->name('confirm_scheduleVcall');
     Route::post('save-student/{id}', [SaveStudentController::class, 'save_student'])->name('save_student');
     Route::get('change_contact_state/{id}',[ContactController::class, 'change_contact_state'])->name('change_contact_state');
     Route::get('/edit_logo/{id}', [BasicInfoController::class, 'editLogo'])->name('logo.edit');
@@ -57,6 +60,7 @@ Route::middleware(['auth', 'CheckStatus'])->group(function (){
     Route::post('/update_password/{id}/', [UserController::class, 'update_password'])->name('user.update_password');
     
     // Resources 
+    Route::resource('vcall', VcallController::class);
     Route::resource('rates', RateController::class);
     Route::resource('teams', TeamModelController::class);
     Route::resource('partners', PartnersController::class);

@@ -61,10 +61,10 @@
                   <a href="{{ route('frontend.rooms')}}" class="nav-link {{ request()->is('visit-our-rooms') ? 'active' : ''}}">ROOMS</a>
                 </li>
                 <li class="nav-item">
-                  <a href="{{ route('frontend.partners')}}" class="nav-link {{ request()->is('our-partners') ? 'active' : ''}}">PARTNERS</a>
+                  <a href="{{ route('frontend.partners')}}" class="nav-link {{ request()->is('our-partners') ? 'active' : ''}}">UNIVERSITIES</a>
                 </li>
                 <li class="nav-item">
-                  <a href="{{ route('frontend.about')}}" class="nav-link {{ request()->is('about-us') ? 'active' : ''}}">ABOUT</a>
+                  <a href="{{ route('frontend.about')}}" class="nav-link {{ request()->is('about-us') ? 'active' : ''}}">ABOUT US</a>
                 </li>
                 <li class="nav-item">
                   <a href="{{ route('frontend.contact')}}" class="nav-link {{ request()->is('contact-us') ? 'active' : ''}}">CONTACT</a>

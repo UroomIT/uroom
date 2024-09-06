@@ -17,9 +17,9 @@
                             <div class="card">
                                 <div class="card-body p-3 p-lg-5">
                                     <div class="section-heading">
-                                        <h2 class="h1">Benefits of working with us</h2>
+                                        <h2 class="h1">Benefits of engaging with us</h2>
                                         <p class="m-0 w-lg-60 w-md-80">
-                                            Feel Free to ask us, it's will be a great pleasure to help uderstung your question.
+                                            We'd love to hear from you. Fill in your details and we'll contact you immediately!
                                         </p>
                                         @if (session('success'))
                                             <div class="alert alert-success alert-dismissible fade show" role="alert">
@@ -69,9 +69,10 @@
                         <div class="col-lg-4 ps-lg-8">
                             <div class="card h-100">
                                 <div class="card-body p-3 p-lg-4">
-                                    <div class="fs-lg mb-3">Write to us or give us a call. We will reply to you as soon as possible. But yes, it can take up to 24 hours.
+                                    <div class="fs-lg mb-3">
+                                        Please visit us at our office during office hours for more detailed inquiries
 
-                                    </div><p class="mb-5">We are open from <strong>9am — 5pm</strong> business days.</p>
+                                    </div><p class="mb-5">We are open from <strong>9am — 5pm</strong> Malaysia (GMT+8).</p>
                                     <div class="d-flex align-items-center mb-3">
                                         <div class="icon-sm bg-primary rounded-circle text-white"><i class="fas fa-envelope"></i></div>
                                         <div class="col ps-3">{{ $email->Email }}</div>
@@ -81,7 +82,7 @@
                                         <div class="col ps-3">{{ $phone->Phone }}</div>
                                     </div><div class="d-flex mb-3">
                                         <div class="icon-sm bg-primary rounded-circle text-white"><i class="fas fa-map-signs"></i></div>
-                                        <div class="col ps-3">153 Williamson Plaza, 09514 United States</div>
+                                        <div class="col ps-3">No, 1-2-29, 2nd Floor,  Block C Phase II, Diamond Square,Jalan 1/50 Off Jalan Gombak, 53000 Setapak, Kuala Lumpur.</div>
                                     </div><h6 class="pt-3 pb-2">Follow Us</h6>
                                     <div class="nav"><a class="btn btn-primary-soft icon-sm p-0 me-2" href="#"><i class="fab fa-facebook-f"></i></a>
                                          <a class="btn btn-primary-soft icon-sm p-0 me-2" href="#"><i class="fab fa-twitter"></i></a> 
@@ -90,6 +91,7 @@
                                         </div>
                                     <div class="p-2 card card-body mt-5">
                                         <div class="ratio ratio-21x9">
+                                        <!-- <iframe aria-hidden="true" frameborder="0" tabindex="-1" style="z-index: -1; position: absolute; width: 100%; height: 100%; top: 0px; left: 0px; border: none; opacity: 0;"></iframe> -->
                                             <!-- <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3151.840107317064!2d144.955925!3d-37.817214!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb6899234e561db11!2sEnvato!5e0!3m2!1sen!2sin!4v1520156366883" allowfullscreen=""></iframe> -->
                                         </div>
                                     </div>

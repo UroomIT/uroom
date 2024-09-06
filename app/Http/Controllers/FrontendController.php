@@ -11,7 +11,9 @@ use App\Models\Rooms;
 use App\Models\TeamModel;
 use App\Models\University;
 use App\Models\User;
+use App\Models\Vcall;
 use Illuminate\Http\Request;
+use MercurySeries\Flashy\Flashy as FlashyFlashy;
 
 class FrontendController extends Controller
 {
@@ -27,6 +29,7 @@ class FrontendController extends Controller
         $total_users_student = User::where('role_id','!=', 1)->count(); 
         $partners = Partners::all();
         $rates = Rate::all();
+        $rooms_available = Rooms::where('IsAvailable', 0)->get(); 
         return view('frontend.index', compact('email',
         'phone', 
         'rooms', 
@@ -36,7 +39,8 @@ class FrontendController extends Controller
         'total_rooms_booked',
         'total_users_student',
         'partners',
-        'rates'
+        'rates',
+        'rooms_available'
     ));
     }
 
@@ -88,5 +92,22 @@ class FrontendController extends Controller
         $rooms = Rooms::where('IsOnline', 1)->paginate(12)->onEachSide(5);
         $partners = Partners::all();
         return view('frontend.rooms', compact('rooms', 'partners'));
+    }
+
+    // function call video 
+    function saveUserVideoCall(Request $request){
+
+        Vcall::create([
+            'name' => $request->name,
+            'gender' => $request->gender,
+            'email' => $request->email,
+            'datecall' => $request->datecall,
+            'datemove' => $request->datemove,
+            'room_id' => $request->room_id,
+            'is_validated' => false, // Initially not validated
+        ]);
+        FlashyFlashy::success('Thank your for your schedule, we will contact you soon ');
+        return redirect()->back();
+        
     }
 }
