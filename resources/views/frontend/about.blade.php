@@ -7,7 +7,7 @@
         <h2 class="display-3 fw-700 text-white lh-1 mb-4">We build, grow and smile together </h2>
         <p class="text-white">
             With our mindset to streamline and 
-            ease the student living experience, Helping student to find accommodation is our goal with <b>UrooM</b>
+            ease the student living experience, Helping student to find accommodation is our main goal with <b>UrooM</b>
 
 
         </p>
@@ -23,26 +23,38 @@
             <div class="col-lg-4"><img src="{{asset('static/frontend/assets/img/about-1.png') }}" title alt></div>
             <div class="col-lg-8 ps-lg-10">
                 <h2 class="h1 mb-1">We are focus on rental room for students</h2>
-                <p>We are dedicated to simplifying the process of finding and renting houses and apartments in Malaysia. Our mission is to connect people with their ideal living spaces quickly and efficiently. Whether you're looking for a cozy apartment in the city or a spacious house in the suburbs, Uroom is here to help you find your perfect home.
-                We understand that searching for a rental property can be overwhelming. That’s why we’ve created a user-friendly platform that makes it easy to browse listings, schedule viewings, and secure your next rental. Our team is committed to providing exceptional customer service and support every step of the way.</p>
+                <p>We are dedicated to simplifying the process of finding and renting houses and apartments 
+                    in Malaysia. That’s why we’ve created a user-friendly platform that makes it easy to browse listings, schedule viewings, and secure your next rental. Our team is committed to providing exceptional customer service and support every step of the way.</p>
                 <div class="row pt-3">
                     <div class="col-lg-12 col-md-12 col-sm-12">
-                        <div
-                            class="d-flex p-3 shadow-lg align-items-center">
-                            <div
-                                class="icon-lg position-relative border border-primary rounded-circle text-primary border-opacity-25"><i
+                        <div class="d-flex p-3 shadow-lg align-items-center">
+                            <div  class="icon-lg position-relative border border-primary rounded-circle text-primary border-opacity-25"><i
                                     class="bi-laptop display-6"></i> <span
-                                    class="icon position-absolute bottom-0 end-0 me-n3 mb-n2 bg-primary bg-opacity-10 rounded-circle"></span></div>
-                            <div
-                                class="col ps-4">
+                                    class="icon position-absolute bottom-0 end-0 me-n3 mb-n2 bg-primary bg-opacity-10 rounded-circle"></span>
+                            </div>
+                            <div class="col ps-4">
+                                <h5 class="h4 m-0">Our Mission </h5>
+                                <p>Our mission is to connect people with their ideal living spaces quickly and efficiently. Whether you're looking for a cozy apartment in the city or a spacious house in the suburbs, Uroom is here to help you find your perfect home.
+                                We understand that searching for a rental property can be overwhelming. 
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                   
+                </div>
+                <div class="row pt-3">
+                <div class="d-flex p-3 shadow-lg align-items-center">
+                            <div  class="icon-lg position-relative border border-primary rounded-circle text-primary border-opacity-25"><i
+                                    class="bi-laptop display-6"></i> <span
+                                    class="icon position-absolute bottom-0 end-0 me-n3 mb-n2 bg-primary bg-opacity-10 rounded-circle"></span>
+                            </div>
+                            <div class="col ps-4">
                                 <h5 class="h4 m-0">Our Vision</h5>
                                 <p>Our vision is to revolutionize the rental market in Malaysia by offering a seamless and enjoyable experience for renters. We aim to be the most trusted and reliable platform for anyone looking to find their next home. By leveraging technology and innovation,
                                 we strive to continuously improve our services and exceed our clients' expectations.
                                 </p>
                             </div>
                         </div>
-                    </div>
-                   
                 </div>
 
             </div>
@@ -90,8 +102,8 @@
             <div class="col-sm-6 col-lg-4">
                 <div class="card">
                     <div class="card-body p-3 p-lg-5 rounded-3 text-center ">
-                            <div class="rounded-circle mb-4">
-                                <img class="rounded-circle" src="{{ $team->photo_url }}" width="40%">
+                            <div class=" mb-4">
+                                <img class="rounded-circle" src="{{ $team->photo_url }}" width="30%">
                             </div>
                         <h5>{{ $team->name }}</h5>
 

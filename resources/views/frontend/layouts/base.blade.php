@@ -10,9 +10,8 @@
   <meta name="keywords" content="Spares Auto – Automotive Templates">
   <meta name="description" content="Spares Auto – Automotive Templates"><!-- title -->
   <title>{{ config('app.name')}} – Feels Like Home</title><!-- Favicon -->
-  @if($logo && method_exists($logo, 'photo_url'))
-  <link rel="shortcut icon" href="{{ $logo->photo_url ? $logo->photo_url : 'Logo' }}"><!-- Google Fonts -->
-  @endif
+  <link rel="shortcut icon" href="{{asset('static/frontend/assets/img/fivicon.png') }}"><!-- Google Fonts -->
+ 
   <link rel="preconnect" href="https://fonts.googleapis.com/">
   <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&amp display=swap" rel="stylesheet"><!-- CSS Template -->
@@ -25,9 +24,9 @@
         right: 20px;
         background-color: #25D366;
         color: white;
-        border-radius: 50%;
-        width: 60px;
-        height: 60px;
+        border-radius: 2%;
+        width: 150px;
+        height: 40px;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -59,7 +58,8 @@
         @include('frontend.partials.header')
         @yield('content')
         <a href="https://wa.me/60124243438" class="whatsapp-button" target="_blank">
-            <img src="{{ asset('static/frontend/assets/img/whatsapp.png') }}" alt="WhatsApp">
+          Chat with us
+          <img src="{{ asset('static/frontend/assets/img/whatsapp.png') }}" alt="WhatsApp">
         </a>
 
         <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>

@@ -93,7 +93,7 @@
           <div class="d-flex bg-primary bg-opacity-10 p-4 rounded-3"><span class="display-3 lh-1 text-primary"><i class="bi-award"></i></span>
             <div class="col ps-4">
               <h5 class="mb-2">Comfortable Quality</h5>
-              <p class="m-0">TQuality is at the heart of everything we do.</p>
+              <p class="m-0">Quality is at the heart of everything we do.</p>
             </div>
           </div>
         </div>
@@ -101,9 +101,7 @@
           <div class="d-flex bg-primary bg-opacity-10 p-4 rounded-3"><span class="display-3 lh-1 text-primary"><i class="bi-hand-thumbs-up"></i></span>
             <div class="col ps-4">
               <h5 class="mb-2">Promise of Satisfaction</h5>
-              <p class="m-0">Tincidunt elit magnis
-                nulla facilisis
-                sags</p>
+              <p class="m-0">Your satisfaction is our top priority. </p>
             </div>
           </div>
         </div>
@@ -207,8 +205,8 @@
               <!-- Text Column -->
               <div class="col-lg-6">
                   <div class="info">
-                      <h2 class="text-gray">Easily Rent Your Room with Uroom</h2>
-                      <p class="lead text-muted">Whether you're across town or across the globe, Uroom lets you explore and secure the perfect room remotely. Start now and make your move hassle-free.</p>
+                      <h2 class="text-black">Easily Rent Your Room</h2>
+                      <p class="lead">Whether you're across town or across the globe, Uroom lets you explore and secure the perfect room remotely. Start now and make your move hassle-free.</p>
                       <!-- <p class="mb-4">Whether you're across town or across the globe, Uroom lets you explore and secure the perfect room remotely. Start now and make your move hassle-free.</p> -->
                       <a href="https://www.youtube.com/watch?v=bTZwlwqC1_Q" target="_blank" class="btn btn-danger">Watch the Full Video</a>
                   </div>
@@ -227,7 +225,7 @@
         <div class="col-lg-6 ps-lg-10">
 
           <h2 class="h1 mb-4">Your Hassle-Free Accomodation Partner</h2>
-          <p>We’re here to make finding and renting your perfect room as
+          <p class="lead">We’re here to make finding and renting your perfect room as
             smooth and stress-free as possible.Trust us to handle the details so you can
             focus on enjoying your new home away from home</p>
 
@@ -310,7 +308,9 @@
                 <div class="info">
                     <h1 class="h1">Explore Rooms Virtually</h1>
                     <p class="lead">See your future room from anywhere in the world with a live video call. Schedule a virtual tour and get a real-time look at the room, ensuring it's the perfect fit for you.</p>
-                    <a href="#" class="btn btn-danger mt-3">Schedule a Video Call</a>
+                   
+                    <button type="button" class="btn btn-danger mt-3" data-bs-toggle="modal"
+                     data-bs-target="#modalCall "> Schedule a Video Call</button>
                 </div>
             </div>
             <div class="col-lg-7 text-center">
@@ -330,13 +330,13 @@
           <div class="row gy-5">
               <div class="col-6 col-lg-3">
                   <div class="text-center">
-                      <div class="display-4 text-dark lh-1 pb-2">{{ $total_rooms_available }}</div>
+                      <div class="display-4 text-dark lh-1 pb-2">43</div>
                       <span class="h6 text-muted">Rooms Available</span>
                   </div>
               </div>
               <div class="col-6 col-lg-3">
                   <div class="text-center">
-                      <div class="display-4 text-dark lh-1 pb-2">120</div>
+                      <div class="display-4 text-dark lh-1 pb-2">129</div>
                       <span class="h6 text-muted">Rooms Booked</span>
                   </div>
               </div>
@@ -348,7 +348,7 @@
               </div>
               <div class="col-6 col-lg-3">
                   <div class="text-center">
-                      <div class="display-4 text-dark lh-1 pb-2">30</div>
+                      <div class="display-4 text-dark lh-1 pb-2">30+</div>
                       <span class="h6 text-muted">Partners</span>
                   </div>
               </div>
@@ -506,14 +506,91 @@
   </section>
 
 
+  
+<!-- ajouter une porte -->
+<div class="modal fade" id="modalCall" data-bs-backdrop="static">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content bg-light">
+            <div class="modal-header">
+                <div class="modal-title fs-5">Schedule Video Call with us </div>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <form action="{{ route('saveUserVideoCall')}}" method="POST" enctype="multipart/form-data">
+                    @csrf
+                    <div class="mb-3 row">
+                        <label for="name" class="col-sm-4 col-form-label">Name *</label>
+                        <div class="col-sm-8">
+                            <input type="text" class="form-control" id="name" name="name" required>
+                            @error('first_name') <span class="text-danger error">This field is require </span>@enderror
+                        </div>
+                    </div>
+                    <div class="mb-3 row">
+                        <label for="inputSexe" class="col-sm-4 col-form-label">Gender *</label>
+                        <div class="col-sm-8">
+                            <select name="gender" id="inputSexe" class="form-control">
+                                <option value="M">Male</option>
+                                <option value="F">Female</option>
+                                <option value="O">Other</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="mb-3 row">
+                        <label for="inputEmail" class="col-sm-4 col-form-label">Email Address *</label>
+                        <div class="col-sm-8">
+                            <input type="email" class="form-control" id="inputEmail" name="email" value="{{ old('email') }}">
+                            @error('Email')
+                            <span class="text-danger error">Ce champ est requis</span>
+                            @enderror
+                        </div>
+                    </div>
+                    <div class="mb-3 row">
+                        <label for="inputphone" class="col-sm-4 col-form-label">Date for Call *</label>
+                        <div class="col-sm-8">
+                            <input type="datetime-local" class="form-control" id="date" name="datecall" value="{{ old('datecall') }}">
+                            @error('datemove')
+                            <span class="text-danger error">This field is required</span>
+                            @enderror
+                            <small>The date you want to sit for video call </small>
+                        </div>
+                    </div>
+                    <div class="mb-3 row">
+                        <label for="inputphone" class="col-sm-4 col-form-label">Moving Date *</label>
+                        <div class="col-sm-8">
+                            <input type="date" class="form-control" id="date" name="datemove" value="{{ old('datemove') }}">
+                            @error('datemove')
+                            <span class="text-danger error">This field is required</span>
+                            @enderror
+                            <small>The date approximatively plan to move</small>
+                        </div>
+                    </div>
+                    <div class="mb-3 row">
+                        <label for="room" class="col-sm-4 col-form-label">Rooms *</label>
+                        <div class="col-sm-8">
+                            <select name="room_id" id="room_id" class="form-control">
+                                <option value="" selected disabled>Select</option>
+                                @foreach($rooms_available as $room)
+                                <option value="{{ $room->id}}">{{ $room->Title }} - {{ $room->type_room->Name }} - {{ $room->university->name }}</option>
+                                @endforeach
+                            </select>
+                            <small>Select the room you want to visit by video</small>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-sm-12 mt-3 d-flex justify-content-between">
+                            <div></div>
+                            <button type="submit" class="btn btn-danger">Send Request</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
 
-
-
-
-
-
-
-
+        </div>
+    </div>
+</div>
 </main><!-- End Main --><!-- Footer --><!-- Footer -->
+
+
+
 
 @endsection

@@ -5,8 +5,8 @@
     <div class="position-absolute top-0 start-0 end-0 bottom-0 bg-black bg-opacity-80"></div>
     <div class="container position-relative">
         <h2 class="display-3 fw-700 text-white lh-1 mb-4">Find your new home here</h2>
-        <p class="text-white">We are the Malaysia's Fatest Purpose-built Student Accomodation. Join our rooms and have more
-            adventages in terms of price, space and maintenance.
+        <p class="text-white">We are the Malaysia's Fastest Purpose-built Student Accomodation. Join our rooms and have more
+            advantages in terms of price, space and maintenance.
             <!-- The Cheapest Student housing in Kuala Lumpur. -->
         </p>
     </div>

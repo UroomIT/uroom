@@ -5,23 +5,38 @@
             <div class="col-lg-4 col-xl-3">
               <div class="pb-4">
                 @isset($logo->photo_url)
-                <img src="{{ $logo->photo_url }}" title alt  style="width: 150px; height: auto;">
+                <img src="{{asset('static/frontend/assets/img/footer.png') }}" title alt  style="width: 150px; height: auto;">
                 @endisset
               </div>
-              <address class="white-link mb-4">
-                <p class="text-white mb-2 m-0 text-opacity-75">
-                  <b>We</b> are now Malaysia's Fatest Purpose-built Student Accomodation
+              <address class="white-link text-white mb-4">
+                <b>Address:</b>
+                <p class="text-white">
+                No, 1-2-29, 2nd Floor,  Block C Phase II, Diamond Square,
+                Jalan 1/50 Off Jalan Gombak, 53000 Setapak, Kuala Lumpur.
                 </p>
               </address>
-              <div class="nav fs-5">
-                <a class="me-3 text-white" href="#"><i class="bi bi-facebook"></i> </a>
-                <a class="me-3 text-white" href="#"><i class="bi bi-twitter"></i> </a>
-                <a class="me-3 text-white" href="#"><i class="bi bi-instagram"></i> </a>
-                <a class="me-3 text-white" href="#"><i class="bi bi-linkedin"></i></a></div>
+              <div class="nav fs-6 text-white">
+                <b>Office Hours:</b>
+                <p class="text-white">
+                Monday - Friday 9:00 am -  6:00 pm (Malaysia GMT + 8)
+                </p> 
+              </div>
+              <div class="nav fs-6 text-white">
+                <b>OFFICE:</b>
+                <p class="text-white">
+                  +60 3-4032 3043
+                </p> 
+              </div>
+              <div class="nav fs-6 text-white">
+                <b>FAX :</b>
+                <p class="text-white">
+                  +60 3-4032 3043
+                </p> 
+              </div>
+              
             </div>
             <div class="col-lg-8 ms-auto">
               <div class="row gy-5">
-              
                 <div class="col-6 col-lg-3">
                   <h5 class="text-white footer-title-01 font-alt fs-lg">Company</h5>
                   <ul class="list-unstyled footer-link-01 m-0">
@@ -54,16 +69,15 @@
       <div class="py-2">
         <div class="container">
           <div class="row gy-3 align-items-center">
-            <div class="col-md-6">
+            <div class="col-md-4">
               <ul class="nav justify-content-center justify-content-md-start my-2 links-white small list-unstyled footer-link-01 m-0">
-                <li class="p-0 mx-3 ms-md-0 me-md-3"><a href="#" class="link-white opacity-7">Privace &amp;
-                    Policy</a></li>
-                <li class="p-0 mx-3 ms-md-0 me-md-3"><a href="#" class="link-white opacity-7">FAQ</a></li>
-               
+                <li class="p-0 mx-3 ms-md-0 me-md-3">
+                  <a href="#" class="link-white opacity-7">copyright © {{ date('Y')}} KPK Uroom Sdn Bhd</a></li>
+                
               </ul>
             </div>
-            <div class="col-md-6 text-center text-md-end">
-              <p class="text-white text-opacity-85 small m-0">© {{ date('Y')}} {{ config('app.name')}}</p>
+            <div class="col-md-8 text-center text-md-end">
+              <p class="text-white text-opacity-85 small m-0"> In Collobration with Universiti Putra Malaysia (UPM) </p>
             </div>
           </div>
         </div>
