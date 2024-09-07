@@ -45,7 +45,7 @@ $photoUrl = str_replace('\\', '/', $room->photo_url);
                                     <div class="container position-relative">
                                         <div class="row min-vh-75 align-items-center justify-content-center section">
                                             <div class="col-lg-9 text-center">
-                                                <h1 class="display-1 text-white mb-4"> {{ $portfolio->title1}}
+                                                <h1 class="display-3 text-white mb-4"> {{ $portfolio->title1}}
                                                 </h1>
                                             </div>
                                         </div>
@@ -59,7 +59,7 @@ $photoUrl = str_replace('\\', '/', $room->photo_url);
                                         <div class="row min-vh-75 align-items-center justify-content-center section">
                                             <div class="col-lg-9 text-center">
 
-                                                <h1 class="display-1 text-white mb-4"> {{ $portfolio->title2}}
+                                                <h1 class="display-3 text-white mb-4"> {{ $portfolio->title2}}
                                                 </h1>
                                             </div>
                                         </div>
@@ -73,8 +73,7 @@ $photoUrl = str_replace('\\', '/', $room->photo_url);
                                     <div class="container position-relative">
                                         <div class="row min-vh-75 align-items-center justify-content-center section">
                                             <div class="col-lg-9 text-center">
-
-                                                <h1 class="display-1 text-white mb-4"> {{ $portfolio->title3}}
+                                                <h1 class="display-3 text-white mb-4"> {{ $portfolio->title3}}
                                                 </h1>
                                             </div>
                                         </div>
@@ -88,7 +87,7 @@ $photoUrl = str_replace('\\', '/', $room->photo_url);
                                     <div class="container position-relative">
                                         <div class="row min-vh-75 align-items-center justify-content-center section">
                                             <div class="col-lg-9 text-center">
-                                                <h1 class="display-1 text-white mb-4"> {{ $portfolio->title4}}
+                                                <h1 class="display-3 text-white mb-4"> {{ $portfolio->title4}}
                                                 </h1>
 
 
@@ -256,7 +255,7 @@ $photoUrl = str_replace('\\', '/', $room->photo_url);
 </section><!-- end section -->
 
 
-<!-- ajouter une porte -->
+<!-- Book rooms -->
 <div class="modal fade" id="modalLg" data-bs-backdrop="static">
     <div class="modal-dialog modal-lg">
         <div class="modal-content bg-light">
@@ -295,7 +294,7 @@ $photoUrl = str_replace('\\', '/', $room->photo_url);
                     <div class="mb-3 row">
                         <label for="inputEmail" class="col-sm-4 col-form-label">Email Address *</label>
                         <div class="col-sm-8">
-                            <input type="email" class="form-control" id="inputEmail" name="email" value="{{ old('email') }}">
+                            <input type="email" class="form-control" id="inputEmail" placeholder="myemail@gmail.com" name="email" value="{{ old('email') }}">
                             @error('Email')
                             <span class="text-danger error">Ce champ est requis</span>
                             @enderror
@@ -308,6 +307,7 @@ $photoUrl = str_replace('\\', '/', $room->photo_url);
                             @error('phone')
                             <span class="text-danger error">Ce champ est requis</span>
                             @enderror
+                            <small>Phone: 011-6000 0000</small>
                         </div>
                     </div>
                     <div class="mb-3 row">
@@ -317,6 +317,7 @@ $photoUrl = str_replace('\\', '/', $room->photo_url);
                             @error('address')
                             <span class="text-danger error">Ce champ est requis</span>
                             @enderror
+                            <small>Ex: Your city</small>
                         </div>
                     </div>
 
@@ -329,6 +330,7 @@ $photoUrl = str_replace('\\', '/', $room->photo_url);
                                 <option value="{{ $university->id}}">{{ $university->name }}</option>
                                 @endforeach
                             </select>
+                            <small>University you want to study</small>
                         </div>
                     </div>
 

@@ -6,7 +6,7 @@
     <div class="container position-relative">
       <h2 class="display-3 fw-700 text-white lh-1 mb-4">Universities we serve</h2>
       <p class="text-white">
-        Let's be part of our serves Universities and benefits the most attractive things for your company.
+        Find the best student homes near prestigious universities
       </p>
     </div>
   </section><!-- End Section --><!-- section -->

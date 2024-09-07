@@ -55,6 +55,8 @@
                     @yield('content')
                 </div>
             </div>
+            <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+            @include('flashy::message')
             @include('partials.footer')
         </div>
 
@@ -71,8 +73,7 @@
     <script src="{{asset('static/src/plugins/src/waves/waves.min.js') }}"></script>
     <script src="{{asset('static/layouts/collapsible-menu/app.js') }}"></script>
     <!-- END GLOBAL MANDATORY SCRIPTS -->
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-    @include('flashy::message')
+    
     <!-- BEGIN PAGE LEVEL PLUGINS/CUSTOM SCRIPTS -->
     <script src="{{asset('static/src/plugins/src/apex/apexcharts.min.js') }}"></script>
     <script src="{{asset('static/src/assets/js/dashboard/dash_1.js') }}"></script>

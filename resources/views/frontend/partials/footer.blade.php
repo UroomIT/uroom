@@ -22,13 +22,13 @@
                 </p> 
               </div>
               <div class="nav fs-6 text-white">
-                <b>OFFICE:</b>
+                <b>OFFICE:</b> &nbsp;&nbsp;
                 <p class="text-white">
-                  +60 3-4032 3043
+                  +60 3-4032 2043
                 </p> 
               </div>
               <div class="nav fs-6 text-white">
-                <b>FAX :</b>
+                <b>FAX :</b> &nbsp;&nbsp;
                 <p class="text-white">
                   +60 3-4032 3043
                 </p> 
@@ -42,23 +42,31 @@
                   <ul class="list-unstyled footer-link-01 m-0">
                     <li><a class="text-white text-opacity-75" href="{{ route('frontend.index')}}">Home</a></li>
                     <li><a class="text-white text-opacity-75" href="{{ route('frontend.rooms')}}">Rooms</a></li>
-                    <li><a class="text-white text-opacity-75" href="{{ route('frontend.partners')}}">Partners</a></li>
-                    <li><a class="text-white text-opacity-75" href="{{ route('frontend.about')}}">About</a></li>
-                    <li><a class="text-white text-opacity-75" href="{{ route('frontend.contact')}}">Contact</a></li>
+                    <li><a class="text-white text-opacity-75" href="{{ route('frontend.partners')}}">Universities</a></li>
+                    <li><a class="text-white text-opacity-75" href="{{ route('frontend.about')}}">About Us</a></li>
+                    <li><a class="text-white text-opacity-75" href="{{ route('frontend.contact')}}">Contact Us</a></li>
                   </ul>
                 </div>
                 <div class="col-6 col-lg-3">
                 </div>
 
                 <div class="col-sm-6 col-lg-6">
+                    @if (session('success'))
+                        <div class="alert alert-success alert-dismissible fade show" role="alert">
+                            <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Success:"><use xlink:href="#check-circle-fill"/></svg>
+                            {{ session('success') }}
+                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                        </div>
+                    @endif
                   <h5 class="text-white footer-title-01 font-alt fs-lg">Subscribe</h5>
-                  <p class="mb-3 text-white text-opacity-80">You can subscribre to our daily emails to get best offers 
+                  <p class="mb-3 text-white text-opacity-80">You can subscribe to our daily emails to get best offers 
                     for rooms
                   </p>
-                  <form class="d-flex flex-row mb-2 p-1 bg-white input-group rounded">
-                    <input type="email" class="form-control rounded-0 border-0" placeholder="youremail@gmail.com">
-                     <button class="btn btn-danger rounded flex-shrink-0" type="submit">Submit</button></form>
-                  
+                  <form method="post" action="{{ route('emailSubscribe') }}" class="d-flex flex-row mb-2 p-1 bg-white input-group rounded">
+                    @csrf
+                    <input type="email" class="form-control rounded-0 border-0" name="email" placeholder="youremail@gmail.com">
+                     <button class="btn btn-danger rounded flex-shrink-0" type="submit">Subscribe</button>
+                  </form>
                 </div>
               </div>
             </div>
@@ -72,7 +80,7 @@
             <div class="col-md-4">
               <ul class="nav justify-content-center justify-content-md-start my-2 links-white small list-unstyled footer-link-01 m-0">
                 <li class="p-0 mx-3 ms-md-0 me-md-3">
-                  <a href="#" class="link-white opacity-7">copyright © {{ date('Y')}} KPK Uroom Sdn Bhd</a></li>
+                  <a href="#" class="link-white opacity-7">Copyright © {{ date('Y')}} KPK Uroom Sdn Bhd</a></li>
                 
               </ul>
             </div>

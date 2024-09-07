@@ -36,21 +36,22 @@
             </div>
             </div>
             <!-- Image and Rating -->
+            <a href="{{ route('frontend.room_detail', $room->id)}}">
             <div class="hover-scale-in rounded-3">
-              <a href="{{ route('frontend.room_detail', $room->id)}}">
                 <img src="{{ $room->photo_url }}" title alt class="img-fluid rounded-3">
-              </a>
             </div>
+            </a>
             <div class="position-absolute top-0 start-0 w-100 z-1 d-flex justify-content-center hover-opacity-in p-3">
-              <div class="bg-white text-uppercase fw-500 px-3 py-2 rounded shadow-sm fs-sm fw-600">
-              
-                <img src="{{ $room->logo_url }}" alt="" class="img img-thumbnail img-cartoon" style="width: max-content; height: max-content; object-fit: contain;">
-               
-              </div>
+            <a href="{{ route('frontend.room_detail', $room->id)}}">  
+                <div class="bg-white text-uppercase fw-500 px-3 py-2 rounded shadow-sm fs-sm fw-600">
+                    <img src="{{ $room->logo_url }}" alt="" class="img img-thumbnail img-cartoon" style="width: max-content; height: max-content; object-fit: contain;">
+                </div>
+              </a>
             </div>
             <!-- Title and Price -->
             <div class="position-absolute bottom-0 start-0 end-0 p-2 z-1" style="background-color: rgba(0, 0, 0, 0.7);">
               <div class="text-center p-0">
+                
                 <h6 class="text-white"><a href="{{ route('frontend.room_detail', $room->id)}}" class="text-reset">{{ $room->Title }} - {{ $room->type_room->Name}}</a></h6>
                 <p class="m-0 text-white text-opacity-100"><b>RM {{ $room->Price }} / Month</b></p>
                 <small style="color: white;">

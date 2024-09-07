@@ -40,17 +40,18 @@
                                             <div class="col-md-6">
                                                 <div class="form-group">
                                                     <label class="form-label">Your Email *</label> 
-                                                    <input type="text" class="form-control" placeholder="info@domain.com" name="email" required>
+                                                    <input type="text" class="form-control" placeholder="youremail@gmail.com" name="email" required>
                                                 </div>
                                             </div>
                                             <div class="col-md-6">
                                                 <div class="form-group"><label class="form-label">Subject</label> 
-                                                    <input type="text" class="form-control" placeholder="Web design" name="subject" required>
+                                                    <input type="text" class="form-control" placeholder="Accomodation" name="subject" required>
                                                 </div>
                                             </div>
                                             <div class="col-md-6">
                                                 <div class="form-group"><label class="form-label">Phone</label> 
-                                                    <input type="text" class="form-control" placeholder="+014 85652355" name="phone" required>
+                                                    <input type="text" class="form-control" placeholder="+60 85652355" name="phone" required>
+                                                    <small>+60 </small>
                                                 </div>
                                             </div>
                                             <div class="col-md-12">
@@ -84,10 +85,10 @@
                                         <div class="icon-sm bg-primary rounded-circle text-white"><i class="fas fa-map-signs"></i></div>
                                         <div class="col ps-3">No, 1-2-29, 2nd Floor,  Block C Phase II, Diamond Square,Jalan 1/50 Off Jalan Gombak, 53000 Setapak, Kuala Lumpur.</div>
                                     </div><h6 class="pt-3 pb-2">Follow Us</h6>
-                                    <div class="nav"><a class="btn btn-primary-soft icon-sm p-0 me-2" href="#"><i class="fab fa-facebook-f"></i></a>
-                                         <a class="btn btn-primary-soft icon-sm p-0 me-2" href="#"><i class="fab fa-twitter"></i></a> 
-                                         <a class="btn btn-primary-soft icon-sm p-0 me-2" href="#"><i class="fab fa-linkedin-in"></i></a> 
-                                         <a class="btn btn-primary-soft icon-sm p-0 me-2" href="#"><i class="fab fa-instagram"></i></a>
+                                    <div class="nav"><a class="btn btn-primary-soft icon-sm p-0 me-2" href="https://www.facebook.com/uroom43?mibextid=LQQJ4d"><i class="fab fa-facebook-f"></i></a>
+                                         <a class="btn btn-primary-soft icon-sm p-0 me-2" href="https://www.instagram.com/uroom43?igsh=MWF0d3pyYTU4bmh4aQ=="><i class="fab fa-twitter"></i></a> 
+                                         <a class="btn btn-primary-soft icon-sm p-0 me-2" href="https://www.instagram.com/uroom43?igsh=MWF0d3pyYTU4bmh4aQ=="><i class="fab fa-linkedin-in"></i></a> 
+                                         <a class="btn btn-primary-soft icon-sm p-0 me-2" href="https://www.instagram.com/uroom43?igsh=MWF0d3pyYTU4bmh4aQ=="><i class="fab fa-instagram"></i></a>
                                         </div>
                                     <div class="p-2 card card-body mt-5">
                                         <div class="ratio ratio-21x9">

@@ -13,6 +13,7 @@ use App\Http\Controllers\RoleController;
 use App\Http\Controllers\RoomsController;
 use App\Http\Controllers\SaveStudentController;
 use App\Http\Controllers\StudentController;
+use App\Http\Controllers\SubscriberController;
 use App\Http\Controllers\TeamModelController;
 use App\Http\Controllers\TypePaymentController;
 use App\Http\Controllers\TypeRoomController;
@@ -23,11 +24,12 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('', [FrontendController::class, 'index'])->name('frontend.index');
 // frontend controller
+Route::post('/subscribe-email', [FrontendController::class, 'emailSubscribe'])->name('emailSubscribe');
 Route::post('/save-user-call', [FrontendController::class, 'saveUserVideoCall'])->name('saveUserVideoCall');
 Route::get('/rom-detail/{id}', [FrontendController::class, 'roomDetail'])->name('frontend.room_detail');
 Route::get('about-us/', [FrontendController::class, 'about'])->name('frontend.about');
 Route::get('contact-us/', [FrontendController::class, 'contact'])->name('frontend.contact');
-Route::get('our-partners/', [FrontendController::class, 'partners'])->name('frontend.partners');
+Route::get('universities-we-serve/', [FrontendController::class, 'partners'])->name('frontend.partners');
 Route::get('visit-our-rooms/', [FrontendController::class, 'room_page'])->name('frontend.rooms');
 Route::get('changeRoomState/{room}',[RoomsController::class, 'change_room_state'])->name('change_room_state');
 Route::get('changeComplainState/{complain}',[ComplainController::class, 'change_complain_state'])->name('change_complain_state');
@@ -60,6 +62,7 @@ Route::middleware(['auth', 'CheckStatus'])->group(function (){
     Route::post('/update_password/{id}/', [UserController::class, 'update_password'])->name('user.update_password');
     
     // Resources 
+    Route::resource('subscribers', SubscriberController::class);
     Route::resource('vcall', VcallController::class);
     Route::resource('rates', RateController::class);
     Route::resource('teams', TeamModelController::class);
