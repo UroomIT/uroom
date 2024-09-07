@@ -98,7 +98,7 @@
                 $photoUrl = str_replace('\\', '/', $team->photo_url);
             @endphp
             <div class="col-sm-6 col-lg-4">
-                <div class="card">
+                <div class="card rounded-3">
                     <div class="card-body p-3 p-lg-5 rounded-3 text-center ">
                             <div class="mb-4">
                                 <img class="img img-rounded img-cartoon" src="{{ $team->photo_url }}" width="50%">
@@ -111,9 +111,6 @@
                         <p class="mb-5 text-center">
                             <i class="fas fa-envelope"></i> <br>
                             {{ $team->email }} </p>
-                        <p class="mb-5 text-center">
-                            <i class="fas fa-phone"></i> <br>
-                            {{ $team->phone }} </p>
                         <!-- <a class="icon-sm btn p-0 btn-outline-primary rounded-circle stretched-link" href="">
                          <i class="bi-chevron-right"></i>
                         </a> -->

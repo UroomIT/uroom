@@ -116,7 +116,6 @@ class FrontendController extends Controller
         Subscriber::create([
             'email' => $request->email,
         ]);
-        FlashyFlashy::success('Thank your for subscribing to our newsletter, you will receive news for new rooms ');
-        return redirect()->back();
+        return redirect()->back()->with('success', 'Thank your for subscribing to our newsletter, you will receive news for new rooms');;
     }
 }
