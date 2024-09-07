@@ -8,6 +8,7 @@ use App\Models\Partners;
 use App\Models\Portfolio;
 use App\Models\Rate;
 use App\Models\Rooms;
+use App\Models\Subscriber;
 use App\Models\TeamModel;
 use App\Models\University;
 use App\Models\User;
@@ -109,5 +110,13 @@ class FrontendController extends Controller
         FlashyFlashy::success('Thank your for your schedule, we will contact you soon ');
         return redirect()->back();
         
+    }
+
+    function emailSubscribe(Request $request){
+        Subscriber::create([
+            'email' => $request->email,
+        ]);
+        FlashyFlashy::success('Thank your for subscribing to our newsletter, you will receive news for new rooms ');
+        return redirect()->back();
     }
 }

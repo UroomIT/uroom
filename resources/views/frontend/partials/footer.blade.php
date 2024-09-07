@@ -22,13 +22,13 @@
                 </p> 
               </div>
               <div class="nav fs-6 text-white">
-                <b>OFFICE:</b>
+                <b>OFFICE:</b> &nbsp;&nbsp;
                 <p class="text-white">
-                  +60 3-4032 3043
+                  +60 3-4032 2043
                 </p> 
               </div>
               <div class="nav fs-6 text-white">
-                <b>FAX :</b>
+                <b>FAX :</b> &nbsp;&nbsp;
                 <p class="text-white">
                   +60 3-4032 3043
                 </p> 
@@ -42,9 +42,9 @@
                   <ul class="list-unstyled footer-link-01 m-0">
                     <li><a class="text-white text-opacity-75" href="{{ route('frontend.index')}}">Home</a></li>
                     <li><a class="text-white text-opacity-75" href="{{ route('frontend.rooms')}}">Rooms</a></li>
-                    <li><a class="text-white text-opacity-75" href="{{ route('frontend.partners')}}">Partners</a></li>
-                    <li><a class="text-white text-opacity-75" href="{{ route('frontend.about')}}">About</a></li>
-                    <li><a class="text-white text-opacity-75" href="{{ route('frontend.contact')}}">Contact</a></li>
+                    <li><a class="text-white text-opacity-75" href="{{ route('frontend.partners')}}">Universities</a></li>
+                    <li><a class="text-white text-opacity-75" href="{{ route('frontend.about')}}">About Us</a></li>
+                    <li><a class="text-white text-opacity-75" href="{{ route('frontend.contact')}}">Contact Us</a></li>
                   </ul>
                 </div>
                 <div class="col-6 col-lg-3">
@@ -52,13 +52,14 @@
 
                 <div class="col-sm-6 col-lg-6">
                   <h5 class="text-white footer-title-01 font-alt fs-lg">Subscribe</h5>
-                  <p class="mb-3 text-white text-opacity-80">You can subscribre to our daily emails to get best offers 
+                  <p class="mb-3 text-white text-opacity-80">You can subscribe to our daily emails to get best offers 
                     for rooms
                   </p>
-                  <form class="d-flex flex-row mb-2 p-1 bg-white input-group rounded">
+                  <form method="post" action="{{ route('emailSubscribe') }}" class="d-flex flex-row mb-2 p-1 bg-white input-group rounded">
+                    @csrf
                     <input type="email" class="form-control rounded-0 border-0" placeholder="youremail@gmail.com">
-                     <button class="btn btn-danger rounded flex-shrink-0" type="submit">Submit</button></form>
-                  
+                     <button class="btn btn-danger rounded flex-shrink-0" type="submit">Submit</button>
+                  </form>
                 </div>
               </div>
             </div>

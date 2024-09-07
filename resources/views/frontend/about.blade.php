@@ -8,8 +8,6 @@
         <p class="text-white">
             With our mindset to streamline and 
             ease the student living experience, Helping student to find accommodation is our main goal with <b>UrooM</b>
-
-
         </p>
     </div>
 </section><!-- End Section --><!-- section -->
@@ -102,8 +100,8 @@
             <div class="col-sm-6 col-lg-4">
                 <div class="card">
                     <div class="card-body p-3 p-lg-5 rounded-3 text-center ">
-                            <div class=" mb-4">
-                                <img class="rounded-circle" src="{{ $team->photo_url }}" width="30%">
+                            <div class="mb-4">
+                                <img class="img img-rounded img-cartoon" src="{{ $team->photo_url }}" width="50%">
                             </div>
                         <h5>{{ $team->name }}</h5>
 
